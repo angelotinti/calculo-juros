@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  taxa-juros:
+    image: taxa-juros-app
+    build:
+      context: TaxaJuros\TaxaJuros.App\
+    ports:
+      - 5001:80
+    networks:
+      - calcula-juros
+
+  calcula-juros:
+    image: calcula-juros-app
+    build:
+      context: CalculaJuros\
+    ports:
+      - 5000:80
+    environment:
+      - TaxaJurosEndpoint=http://taxa-juros/api/taxa-juros
+    networks:
+      - calcula-juros
+    depends_on:
+      - "taxa-juros"
+
+networks:
+    calcula-juros:
+        driver: bridge
