@@ -12,14 +12,13 @@ Após efetuar o clone do projeto, basta executar o seguinte comando:
 Após o projeto estar no ar, você poderá acessar os seguintes endereços:
 
 **TaxaJuros**
-
->http://localhost:5001/swagger
->http://localhost:5001/api/taxa-juros
+ - http://localhost:5001/swagger
+ - http://localhost:5001/api/taxa-juros
 
 **CalculaJuros**
->http://localhost:5000/swagger
->http://localhost:5000/api/calcula-juros
->http://localhost:5000/api/show-me-the-code
+ - http://localhost:5000/swagger
+ - http://localhost:5000/api/calcula-juros
+ - http://localhost:5000/api/show-me-the-code
 
 # Exemplo
 Ao efetuar a seguinte chamada:
